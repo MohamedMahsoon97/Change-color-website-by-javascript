@@ -1,0 +1,1364 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Rubik";
+}
+.main-color{background-color: #4868db;}
+.sec-color{color: #00f;}
+
+.panel-tooltip
+{
+    width: 40px;
+    height: 80px;
+    background-color: #eee;
+    position: fixed;
+    top: 300px;
+    right: 0px;
+    z-index: 5;
+}
+.panel-tooltip .panel-icons
+{
+    text-align: center;
+    margin-top: 5px;
+}
+.panel-tooltip .panel-icons li
+{
+    list-style: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.panel-tooltip .panel-icons li a:hover
+{
+    color: #4868db;
+}
+.panel-tooltip .panel-icons li .cogs:hover .panel-content
+{
+    opacity: 1;
+}
+.show-panel
+{
+    display: block;
+}
+.panel-tooltip .panel-content
+{
+    display: none;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: 55px;
+    top: 0px;
+    background-color: #eee;
+}
+.panel-tooltip .panel-content::after
+{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: -8px;
+    width: 0px;
+    height: 0px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #eee;
+}
+.panel-tooltip .panel-content .panel-btn
+{
+    position: absolute;
+    background-color: #eee;
+    color: #000;
+    top: -26px;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+.panel-tooltip .panel-content .panel-btn i
+{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+.panel-tooltip .panel-content a
+{
+    position: absolute;
+    text-decoration: none;
+    font-size: 15px;
+    background-color: #4868db;
+    color: #fff;
+    padding: 8px;
+    margin-top: 15px;
+    margin-left: 15px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+.panel-tooltip .panel-content a:hover
+{
+    background-color: #263774;
+}
+.panel-tooltip .panel-content h6
+{
+    margin-top: 70px;
+    margin-left: 10px;
+}
+.panel-tooltip .panel-content ul.panel-accent-color {
+    list-style: none;
+    padding: 20px;
+    display: block;
+    overflow: hidden;
+    margin-left: 8px;
+    padding-left: 4px;
+    padding-top: 20px;
+    margin-right: -13px;
+    z-index: 5;
+}
+.panel-tooltip .panel-content .panel-accent-color li {
+    display: block;
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-right: 7px;
+    margin-bottom: 7px;
+    margin-left: 7px;
+    position: relative;
+    cursor: pointer;
+}
+.panel-tooltip .panel-content .panel-accent-color li .color-backface {
+    position: absolute;
+    opacity: 0.6;
+    top: -1px;
+    right: -1px;
+    left: -1px;
+    bottom: -1px;
+    border-radius: 2px;
+    opacity: 1;
+    transition: opacity .1s;
+}
+/* ----------------------------- Start header section ----------------------------- */
+.header
+{
+    background: linear-gradient(-32deg, rgb(69, 104, 220), rgb(176, 106, 179));
+    background-size: cover;
+    width: 100%;
+    height: 750px;
+    position: relative;
+}
+.header .hide-input
+{
+    display: none;
+}
+.header label
+{
+    display: none;
+}
+.header .navbar
+{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 90px;
+    z-index: 10;
+}
+.header .navbar .logo
+{
+    margin-left: 80px;
+}
+.header .navbar .logo img
+{
+    width: 160px;
+    padding: 29px;
+}
+.header div
+{
+    margin-right: 80px;
+    display: flex;
+}
+.header .navbar .nav-center li
+{
+    display: inline-block;
+    padding: 30px 20px;
+}
+.header .navbar .nav-center li a
+{
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    transition: .3s all;
+    -webkit-transition: .3s all;
+    -moz-transition: .3s all;
+    -ms-transition: .3s all;
+    -o-transition: .3s all;
+}
+.header .navbar .nav-center li a:hover
+{
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+.header .navbar .nav-right li
+{
+    display: inline-block;
+    padding: 30px 20px;
+}
+.header .navbar .nav-right li a
+{
+    color: #fff;
+}
+.header .header-content
+{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    width: 100%;
+}
+.header .header-content .header-img
+{
+    width : 40%;
+}
+.header .header-content .header-img img
+{
+    width: 60%;
+    height: 650px;
+    margin-left: 210px;
+}
+.header .header-content .header-contain
+{
+    width: 40%;
+    flex-flow: column wrap;
+    margin-top: 100px;
+}
+.header .header-content .header-contain h2
+{
+    color: #fff;
+    width: 100%;
+    font-size: 48px;
+    text-align: left;
+}
+.header .header-content .header-contain .text
+{
+    width: 100%;
+    padding: 10px 0px;
+}
+.header .header-content .header-contain .text p
+{
+    color: #fff;
+    width: 100%;
+}
+.header .header-content .header-contain .header-btn button
+{
+    padding: 13px 36px;
+    margin: 20px 20px 20px 0px;
+    border-radius: 47px;
+    -webkit-border-radius: 47px;
+    -moz-border-radius: 47px;
+    -ms-border-radius: 47px;
+    -o-border-radius: 47px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Rubik";
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+.header .header-content .header-contain .header-btn .btn1
+{
+    background-color: #fff;
+}
+.header .header-content .header-contain .header-btn .btn2
+{
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+.header .header-content .header-contain .btn1:hover
+{
+    background-color: #4868db;
+    color: #fff;
+    border: none;
+}
+.header .header-content .header-contain .btn2:hover
+{
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #fff;
+}
+/* ------- when scroll window navbar be fixed -------- */
+.navbar-fixed
+{
+    position: fixed !important;
+    background-color: #4868db;
+    width: 85% !important;
+    margin-left: 7.5%;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -ms-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+}
+/* ------- when scroll window navbar be fixed -------- */
+/* ----------------------------- End header section ----------------------------- */
+
+/* -------------------------- Start media query header section ------------------- */
+@media (max-width:767px) {
+    .header
+    {
+        width: 100%;
+        height: 1150px;
+    }
+    .header .navbar
+    {
+        width: 100%;
+    }
+    .header .navbar .logo
+    {
+        margin-left: 10px;
+    }
+    .header label
+    {
+        display: block;
+        position: absolute;
+        top: 18px;
+        right: 20px;
+    }
+    .header label i
+    {
+        padding: 5px;
+        font-size: 25px;
+        color: #fff;
+    }
+    .header .hide-input:checked ~ .nav-content .nav-center
+    {
+        opacity: 1;
+    }
+    .header .nav-content
+    {
+        width: 100%;
+        position: absolute;
+    }
+    .header .navbar .nav-center
+    {
+        z-index: 2;
+        opacity: 0;
+        background-color: #eee;
+        padding: 20px;
+        width: 90%;
+        margin-left: 5%;
+        position: absolute;
+        top: 70px;
+        transition: .6s ease-in-out;
+        -webkit-transition: .6s ease-in-out;
+        -moz-transition: .6s ease-in-out;
+        -ms-transition: .6s ease-in-out;
+        -o-transition: .6s ease-in-out;
+}
+    .header .navbar .nav-center li
+    {
+        display: block;
+        text-align: center;
+        padding: 20px 10px;
+    }
+    .header .navbar .nav-center li a
+    {
+        color: black;
+        font-size: 19px;
+    }
+    .header .navbar .nav-right
+    {
+        position: absolute;
+        top: -5px;
+        right: 50px;
+    }
+    .header .header-content
+    {
+        width: 100%;
+        flex-flow: column wrap;
+    }
+    .header .header-content .header-img
+    {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .header .header-content .header-img img
+    {
+        width: 90%;
+        margin-left: 5%;
+
+    }
+    .header .header-content .header-contain
+    {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 50px;
+    }
+    .header .header-content .header-contain h2
+    {
+        width: 100%;
+        font-size: 35px;
+    }
+    .header .header-content .header-contain .text p
+    {
+        font-size: 16px;
+        line-height: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .header .header-content .header-contain .btn1 , .btn2
+    {
+        padding: 5px 27px;
+        margin: 10px;
+    }
+}
+/* -------------------------- End media query header section --------------------- */
+
+
+/*--------------------------- start Testimonials ---------------------------*/
+.Testimonials
+{
+    height: 500px;
+    margin-top: 50px;
+}
+.Testimonials .testimonial
+{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.Testimonials .testimonial > div
+{
+    width: 25%;
+    height: 200px;
+    margin: 20px;
+    background-color: #f8f8f8;
+    padding: 0px 10px;
+    position: relative;
+}
+.Testimonials .testimonial > div::after
+{
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    bottom: -10px;
+    left: 25px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #f8f8f8;
+}
+.Testimonials .h-p
+{
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #4868db;
+}
+.Testimonials .p-h
+{
+    text-align: center;
+    margin-bottom: 50px;
+    color: gray;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.Testimonials > div .test-content
+{
+    width: 100%;
+    height: 100%;
+}
+.Testimonials > div .test-content h4
+{
+    margin-bottom: 10px;
+    color: rgb(95, 85, 85);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.Testimonials > div .test-content  p
+{
+    margin-bottom: 10px;
+    padding-top: 30px;
+    color: gray;
+    line-height: 30px;
+    letter-spacing: px;
+    margin-left: 2px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+.Testimonials > div .person
+{
+    margin-top: 30px;
+    color: gray;
+
+}
+.Testimonials > div .person h5
+{
+    font-size: 15px;
+    color: #686868;
+}
+.Testimonials > div .person span
+{
+    font-size: 15px;
+    color: #686868;
+}
+.test-sld
+{
+    width: 100px;
+    margin-left: 48%;
+    color: #4868db;
+}
+/*---------------------------- end Testimonials --------------------------------*/
+
+/* -------------------------- Start media query Testimonials section --------------------- */
+@media (max-width:767px) {
+.Testimonials
+{
+    width: 100%;
+    height: 1000px;
+}
+.Testimonials .testimonial
+{
+    flex-flow: column wrap;
+}
+.Testimonials .testimonial > div
+{
+    width: 90%;
+    height: 200px;
+    margin-bottom: 80px;
+    background-color: #f8f8f8;
+    padding: 0px 10px;
+    position: relative;
+}
+.test-sld
+{
+    margin-top: 64px;
+    display: inline-block;
+}
+}
+/* -------------------------- End media query Testimonials section --------------------- */
+
+/* -------------------------- Start Info  Section --------------------- */
+.info
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    margin: 100px 0px 0px;
+    background-color: #4868db;
+}
+.info > div
+{
+    width: 20%;
+    height: 230px;
+    text-align: center;
+    color: #fff;
+}
+.info > div i
+{
+    display: block;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+.info > div span
+{
+    font-size: 33px;
+}
+.info > div h6
+{
+    margin-top: 20px;
+    font-size: 20px;
+    color: #eee
+}
+.info > div > div
+{
+    padding-top: 40px;
+}
+/* -------------------------- End Info  Section --------------------- */
+
+/* -------------------------- Start media query Info section --------------------- */
+@media (max-width:767px) {
+    .info
+    {
+        flex-flow: row wrap;
+    }
+    .info > div
+    {
+        width: 48%;
+    }
+}
+/* -------------------------- End media query Info section --------------------- */
+
+
+/* -------------------------- Start Feeling convinced section --------------------- */
+.feelings
+{
+    display: flex;
+    justify-content: center;
+    background-color: #f8f8f8;
+    padding: 60px 0px;
+}
+.feelings .feelings-content
+{
+    text-align: center;
+}
+.feelings .feelings-content h2
+{
+    font-size: 36px;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+}
+.feelings .feelings-content p
+{
+    font-size: 20px;
+    font-style: normal;
+    margin-top: 0;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+}
+.feelings .feelings-content .feelings-btn .btn1 , .btn2
+{
+    padding: 20px 28px;
+    margin: 13px 7px 0;
+    border-radius: 47px;
+    -webkit-border-radius: 47px;
+    -moz-border-radius: 47px;
+    -ms-border-radius: 47px;
+    -o-border-radius: 47px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Rubik";
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+.feelings .feelings-content .btn1
+{
+    background-color: #4868db;
+    color: #fff;
+}
+.feelings .feelings-content .btn2
+{
+    background-color: transparent;
+    color: #4868db;
+    border: 2px solid #4868db;
+}
+.feelings .feelings-content .btn1:hover
+{
+    background-color: #263033;
+    color: #fff;
+    border: none;
+}
+.feelings .feelings-content .btn2:hover
+{
+    background-color: #4868db;
+    color: #fff;
+    border: 2px solid #4868db;
+}
+/* -------------------------- End Feeling convinced section --------------------- */
+
+
+/* -------------------------- End media query Feeling convinced section --------------------- */
+/* -------------------------- End media query Feeling convinced section --------------------- */
+
+
+
+/* ------------------- start switch color styling ------------------- */
+
+/* --- Color : skyBlue --- */
+/* header */
+.skyBlue .panel-tooltip .panel-content a
+{
+    background-color: #218fe6 !important;
+    color: #fff;
+}
+.skyBlue .panel-tooltip .panel-content a:hover
+{
+    background-color: #20388d;
+}
+.skyBlue .panel-tooltip .panel-content h6
+{
+    color: #218fe6;
+}
+.skyBlue .navbar-fixed
+{
+    background-color : #218fe6 !important;
+}
+.skyBlue .header .navbar .nav-center li a:hover
+{
+    border-bottom: 2px solid #218fe6;
+    color: #218fe6;
+    padding-bottom: 10px;
+}
+.skyBlue .header .header-btn .btn1
+{
+    color: #218fe6;
+}
+.skyBlue .header .header-btn .btn2
+{
+    border: 2px solid #218fe6 !important;
+}
+.skyBlue .header .header-btn .btn1:hover
+{
+    background-color : #218fe6 !important;
+}
+.skyBlue .header .header-btn .btn2:hover
+{
+    border: 2px solid #eee !important;
+    color: #218fe6;
+}
+
+/* Testimonials */
+.skyBlue .Testimonials .h-p , .skyBlue .test-sld
+{
+    color: #218fe6;
+}
+
+/* Information */
+.skyBlue .info
+{
+    background-color : #218fe6 !important;
+}
+
+/* feelings */
+.skyBlue .feelings h2
+{
+    color: #218fe6;
+}
+.skyBlue .feelings .feelings-btn .btn1
+{
+    background-color : #218fe6 !important;
+}
+.skyBlue .feelings .feelings-btn .btn2
+{
+    color : #218fe6 !important;
+    border: 2px solid #218fe6;
+}
+.skyBlue .feelings .feelings-btn .btn1:hover
+{
+    background-color : #fff !important;
+    color: #218fe6 !important;
+    border: 2px solid #218fe6;
+}
+.skyBlue .feelings .feelings-btn .btn2:hover
+{
+    background-color : #218fe6 !important;
+    color: #fff !important;
+}
+/* --- Color : skyBlue --- */
+
+
+
+
+/* --- Color : orange --- */
+/* header */
+.orange .panel-tooltip .panel-content a
+{
+    background-color: #f44336 !important;
+    color: #fff;
+}
+.orange .panel-tooltip .panel-content a:hover
+{
+    background-color: #f44336;
+}
+.orange .panel-tooltip .panel-content h6
+{
+    color: #f44336;
+}
+.orange .navbar-fixed
+{
+    background-color : #f44336 !important;
+}
+.orange .header .navbar .nav-center li a:hover
+{
+    border-bottom: 2px solid #f44336;
+    color: #f44336;
+    padding-bottom: 10px;
+}
+.orange .header .header-btn .btn1
+{
+    color: #f44336;
+}
+.orange .header .header-btn .btn2
+{
+    border: 2px solid #f44336 !important;
+}
+.orange .header .header-btn .btn1:hover
+{
+    background-color : #f44336 !important;
+}
+.orange .header .header-btn .btn2:hover
+{
+    border: 2px solid #eee !important;
+    color: #f44336;
+}
+
+/* Testimonials */
+.orange .Testimonials .h-p , .orange .test-sld
+{
+    color: #f44336 !important;
+}
+
+/* Information */
+.orange .info
+{
+    background-color : #f44336 !important;
+}
+
+/* feelings */
+.orange .feelings h2
+{
+    color: #f44336;
+}
+.orange .feelings .feelings-btn .btn1
+{
+    background-color : #f44336 !important;
+}
+.orange .feelings .feelings-btn .btn2
+{
+    color : #f44336 !important;
+    border: 2px solid #f44336;
+}
+.orange .feelings .feelings-btn .btn1:hover
+{
+    background-color : #fff !important;
+    color: #f44336 !important;
+    border: 2px solid #f44336;
+}
+.orange .feelings .feelings-btn .btn2:hover
+{
+    background-color : #f44336 !important;
+    color: #fff !important;
+}
+/* --- Color : orange --- */
+
+
+
+
+/* --- Color : Red --- */
+/* header */
+.red .panel-tooltip .panel-content a
+{
+    background-color: #e91e63 !important;
+    color: #fff;
+}
+.red .panel-tooltip .panel-content a:hover
+{
+    background-color: #e91e63;
+}
+.red .panel-tooltip .panel-content h6
+{
+    color: #e91e63;
+}
+.red .navbar-fixed
+{
+    background-color : #e91e63 !important;
+}
+.red .header .navbar .nav-center li a:hover
+{
+    border-bottom: 2px solid #e91e63;
+    color: #e91e63;
+    padding-bottom: 10px;
+}
+.red .header .header-btn .btn1
+{
+    color: #e91e63;
+}
+.red .header .header-btn .btn2
+{
+    border: 2px solid #e91e63 !important;
+}
+.red .header .header-btn .btn1:hover
+{
+    background-color : #e91e63 !important;
+}
+.red .header .header-btn .btn2:hover
+{
+    border: 2px solid #eee !important;
+    color: #e91e63;
+}
+
+/* Testimonials */
+.red .Testimonials .h-p , .red .test-sld
+{
+    color: #e91e63 !important;
+}
+
+/* Information */
+.red .info
+{
+    background-color : #e91e63 !important;
+}
+
+/* feelings */
+.red .feelings h2
+{
+    color: #e91e63;
+}
+.red .feelings .feelings-btn .btn1
+{
+    background-color : #e91e63 !important;
+}
+.red .feelings .feelings-btn .btn2
+{
+    color : #e91e63 !important;
+    border: 2px solid #e91e63;
+}
+.red .feelings .feelings-btn .btn1:hover
+{
+    background-color : #fff !important;
+    color: #e91e63 !important;
+    border: 2px solid #e91e63;
+}
+.red .feelings .feelings-btn .btn2:hover
+{
+    background-color : #e91e63 !important;
+    color: #fff !important;
+}
+/* --- Color : Red --- */
+
+
+
+/* --- Color : purple --- */
+/* header */
+.purple .panel-tooltip .panel-content a
+{
+    background-color: #9c27b0 !important;
+    color: #fff;
+}
+.purple .panel-tooltip .panel-content a:hover
+{
+    background-color: #9c27b0;
+}
+.purple .panel-tooltip .panel-content h6
+{
+    color: #9c27b0;
+}
+.purple .navbar-fixed
+{
+    background-color : #9c27b0 !important;
+}
+.purple .header .navbar .nav-center li a:hover
+{
+    border-bottom: 2px solid #9c27b0;
+    color: #9c27b0;
+    padding-bottom: 10px;
+}
+.purple .header .header-btn .btn1
+{
+    color: #9c27b0;
+}
+.purple .header .header-btn .btn2
+{
+    border: 2px solid #9c27b0 !important;
+}
+.purple .header .header-btn .btn1:hover
+{
+    background-color : #9c27b0 !important;
+}
+.purple .header .header-btn .btn2:hover
+{
+    border: 2px solid #eee !important;
+    color: #9c27b0;
+}
+
+/* Testimonials */
+.purple .Testimonials .h-p , .purple .test-sld
+{
+    color: #9c27b0 !important;
+}
+
+/* Information */
+.purple .info
+{
+    background-color : #9c27b0 !important;
+}
+
+/* feelings */
+.purple .feelings h2
+{
+    color: #9c27b0;
+}
+.purple .feelings .feelings-btn .btn1
+{
+    background-color : #9c27b0 !important;
+}
+.purple .feelings .feelings-btn .btn2
+{
+    color : #9c27b0 !important;
+    border: 2px solid #9c27b0;
+}
+.purple .feelings .feelings-btn .btn1:hover
+{
+    background-color : #fff !important;
+    color: #9c27b0 !important;
+    border: 2px solid #9c27b0;
+}
+.purple .feelings .feelings-btn .btn2:hover
+{
+    background-color : #9c27b0 !important;
+    color: #fff !important;
+}
+/* --- Color : purple --- */
+
+
+
+
+/* --- Color : move --- */
+/* header */
+.move .panel-tooltip .panel-content a
+{
+    background-color: #673ab7 !important;
+    color: #fff;
+}
+.move .panel-tooltip .panel-content a:hover
+{
+    background-color: #673ab7;
+}
+.move .panel-tooltip .panel-content h6
+{
+    color: #673ab7;
+}
+.move .navbar-fixed
+{
+    background-color : #673ab7 !important;
+}
+.move .header .navbar .nav-center li a:hover
+{
+    border-bottom: 2px solid #673ab7;
+    color: #673ab7;
+    padding-bottom: 10px;
+}
+.move .header .header-btn .btn1
+{
+    color: #673ab7;
+}
+.move .header .header-btn .btn2
+{
+    border: 2px solid #673ab7 !important;
+}
+.move .header .header-btn .btn1:hover
+{
+    background-color : #673ab7 !important;
+}
+.move .header .header-btn .btn2:hover
+{
+    border: 2px solid #eee !important;
+    color: #673ab7;
+}
+
+/* Testimonials */
+.move .Testimonials .h-p , .move .test-sld
+{
+    color: #673ab7 !important;
+}
+
+/* Information */
+.move .info
+{
+    background-color : #673ab7 !important;
+}
+
+/* feelings */
+.move .feelings h2
+{
+    color: #673ab7;
+}
+.move .feelings .feelings-btn .btn1
+{
+    background-color : #673ab7 !important;
+}
+.move .feelings .feelings-btn .btn2
+{
+    color : #673ab7 !important;
+    border: 2px solid #673ab7;
+}
+.move .feelings .feelings-btn .btn1:hover
+{
+    background-color : #fff !important;
+    color: #673ab7 !important;
+    border: 2px solid #673ab7;
+}
+.move .feelings .feelings-btn .btn2:hover
+{
+    background-color : #673ab7 !important;
+    color: #fff !important;
+}
+/* --- Color : move --- */
+
+
+
+
+/* --- Color : darkBlue --- */
+/* header */
+.darkBlue .panel-tooltip .panel-content a
+{
+    background-color: #3f51b5 !important;
+    color: #fff;
+}
+.darkBlue .panel-tooltip .panel-content a:hover
+{
+    background-color: #3f51b5;
+}
+.darkBlue .panel-tooltip .panel-content h6
+{
+    color: #3f51b5;
+}
+.darkBlue .navbar-fixed
+{
+    background-color : #3f51b5 !important;
+}
+.darkBlue .header .navbar .nav-center li a:hover
+{
+    border-bottom: 2px solid #3f51b5;
+    color: #3f51b5;
+    padding-bottom: 10px;
+}
+.darkBlue .header .header-btn .btn1
+{
+    color: #3f51b5;
+}
+.darkBlue .header .header-btn .btn2
+{
+    border: 2px solid #3f51b5 !important;
+}
+.darkBlue .header .header-btn .btn1:hover
+{
+    background-color : #3f51b5 !important;
+}
+.darkBlue .header .header-btn .btn2:hover
+{
+    border: 2px solid #eee !important;
+    color: #3f51b5;
+}
+
+/* Testimonials */
+.darkBlue .Testimonials .h-p , .darkBlue .test-sld
+{
+    color: #3f51b5 !important;
+}
+
+/* Information */
+.darkBlue .info
+{
+    background-color : #3f51b5 !important;
+}
+
+/* feelings */
+.darkBlue .feelings h2
+{
+    color: #3f51b5;
+}
+.darkBlue .feelings .feelings-btn .btn1
+{
+    background-color : #3f51b5 !important;
+}
+.darkBlue .feelings .feelings-btn .btn2
+{
+    color : #3f51b5 !important;
+    border: 2px solid #3f51b5;
+}
+.darkBlue .feelings .feelings-btn .btn1:hover
+{
+    background-color : #fff !important;
+    color: #3f51b5 !important;
+    border: 2px solid #3f51b5;
+}
+.darkBlue .feelings .feelings-btn .btn2:hover
+{
+    background-color : #3f51b5 !important;
+    color: #fff !important;
+}
+/* --- Color : darkBlue --- */
+
+
+
+
+/* --- Color : Blue --- */
+/* header */
+.blue .panel-tooltip .panel-content a
+{
+    background-color: #2236f3 !important;
+    color: #fff;
+}
+.blue .panel-tooltip .panel-content a:hover
+{
+    background-color: #2236f3;
+}
+.blue .panel-tooltip .panel-content h6
+{
+    color: #2236f3;
+}
+.blue .navbar-fixed
+{
+    background-color : #2236f3 !important;
+}
+.blue .header .navbar .nav-center li a:hover
+{
+    border-bottom: 2px solid #2236f3;
+    color: #2236f3;
+    padding-bottom: 10px;
+}
+.blue .header .header-btn .btn1
+{
+    color: #2236f3;
+}
+.blue .header .header-btn .btn2
+{
+    border: 2px solid #2236f3 !important;
+}
+.blue .header .header-btn .btn1:hover
+{
+    background-color : #3f51b5 !important;
+}
+.blue .header .header-btn .btn2:hover
+{
+    border: 2px solid #eee !important;
+    color: #2236f3;
+}
+
+/* Testimonials */
+.blue .Testimonials .h-p , .blue .test-sld
+{
+    color: #2236f3 !important;
+}
+
+/* Information */
+.blue .info
+{
+    background-color : #2236f3 !important;
+}
+
+/* feelings */
+.blue .feelings h2
+{
+    color: #2236f3;
+}
+.blue .feelings .feelings-btn .btn1
+{
+    background-color : #2236f3 !important;
+}
+.blue .feelings .feelings-btn .btn2
+{
+    color : #2236f3 !important;
+    border: 2px solid #2236f3;
+}
+.blue .feelings .feelings-btn .btn1:hover
+{
+    background-color : #fff !important;
+    color: #2236f3 !important;
+    border: 2px solid #2236f3;
+}
+.blue .feelings .feelings-btn .btn2:hover
+{
+    background-color : #2236f3 !important;
+    color: #fff !important;
+}
+/* --- Color : Blue --- */
+
+
+
+
+/* --- Color : lightGreen --- */
+/* header */
+.lightGreen .panel-tooltip .panel-content a
+{
+    background-color: #009688 !important;
+    color: #fff;
+}
+.lightGreen .panel-tooltip .panel-content a:hover
+{
+    background-color: #009688;
+}
+.lightGreen .panel-tooltip .panel-content h6
+{
+    color: #009688;
+}
+.lightGreen .navbar-fixed
+{
+    background-color : #009688 !important;
+}
+.lightGreen .header .navbar .nav-center li a:hover
+{
+    border-bottom: 2px solid #009688;
+    color: #009688;
+    padding-bottom: 10px;
+}
+.lightGreen .header .header-btn .btn1
+{
+    color: #009688;
+}
+.lightGreen .header .header-btn .btn2
+{
+    border: 2px solid #009688 !important;
+}
+.lightGreen .header .header-btn .btn1:hover
+{
+    background-color : #009688 !important;
+}
+.lightGreen .header .header-btn .btn2:hover
+{
+    border: 2px solid #eee !important;
+    color: #009688;
+}
+
+/* Testimonials */
+.lightGreen .Testimonials .h-p , .lightGreen .test-sld
+{
+    color: #009688 !important;
+}
+
+/* Information */
+.lightGreen .info
+{
+    background-color : #009688 !important;
+}
+
+/* feelings */
+.lightGreen .feelings h2
+{
+    color: #009688;
+}
+.lightGreen .feelings .feelings-btn .btn1
+{
+    background-color : #009688 !important;
+}
+.lightGreen .feelings .feelings-btn .btn2
+{
+    color : #009688 !important;
+    border: 2px solid #009688;
+}
+.lightGreen .feelings .feelings-btn .btn1:hover
+{
+    background-color : #fff !important;
+    color: #009688 !important;
+    border: 2px solid #009688;
+}
+.lightGreen .feelings .feelings-btn .btn2:hover
+{
+    background-color : #009688 !important;
+    color: #fff !important;
+}
+/* --- Color : lightGreen --- */
+
+/* ------------------- end switch color styling ------------------- */
